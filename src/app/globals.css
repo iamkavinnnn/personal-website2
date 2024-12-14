@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Xanh+Mono:ital@0;1&display=swap");
+@import url("https://use.typekit.net/usm1irf.css");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind variants;
+
+body {
+	color: white;
+	background: #17131d;
+}
+
+@layer base {
+	.body {
+		@apply font-mono text-sm;
+	}
+	.link {
+		@apply underline underline-offset-4 decoration-dotted decoration-slate-500 transition-colors hover:underline;
+	}
+}
+
+@layer utilities {
+	.text-balance {
+		text-wrap: balance;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	* {
+		animation: none !important;
+		transition: none !important;
+	}
+}
+
+/* tailwind improvements */
+@layer components {
+	.debug {
+		@apply border border-red-500;
+	}
+
+	.horizontal {
+		@apply flex flex-row;
+	}
+
+	.vertical {
+		@apply flex flex-col;
+	}
+
+	.center-v {
+		@apply justify-center;
+	}
+
+	.center-h {
+		@apply items-center;
+	}
+}
